@@ -13,7 +13,7 @@
 #   2. for hardware encoding, you may need something like:
 #        aptitude install libmfx-dev libva-dev intel-media-va-driver-non-free
 
-if ![ -e /etc/X11/xorg.conf.d/20-intel.conf]; then
+if [ ! -e /etc/X11/xorg.conf.d/20-intel.conf ]; then
         sudo tee /etc/X11/xorg.conf.d/20-intel.conf <<EOF
 # these modelines dump from a fake hdmi dongle
 Section "Monitor"
